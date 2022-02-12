@@ -7,11 +7,12 @@ import Exemplo02 from './hooks/Exemplo02_useState';
 import Exemplo03 from './hooks/Exemplo03_useState';
 import Exemplo04 from './hooks/Exemplo04_useState';
 import Exemplo05 from './hooks/Exemplo05_useEffect';
+import Exemplo06 from './hooks/Exemplo06_useEffect';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Exemplo05 />
+    <Exemplo06 />
   </React.StrictMode>,
   document.getElementById('root')
 );
