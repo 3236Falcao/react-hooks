@@ -4,11 +4,12 @@ import './index.css';
 import App from './App';
 import Exemplo01 from './hooks/Exemplo01_useState';
 import Exemplo02 from './hooks/Exemplo02_useState';
+import Exemplo03 from './hooks/Exemplo03_useState';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Exemplo02 />
+    <Exemplo03 />
   </React.StrictMode>,
   document.getElementById('root')
 );
