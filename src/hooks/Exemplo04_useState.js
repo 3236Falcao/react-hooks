@@ -24,6 +24,8 @@ function Exemplo04_useState (){
             <p>{formulario.nome}</p>
             <p>{formulario.email}</p>
             <p>{formulario.cidade}</p>
+
+            <p>{JSON.stringify(formulario)}</p>
         </div>
     );
 }
