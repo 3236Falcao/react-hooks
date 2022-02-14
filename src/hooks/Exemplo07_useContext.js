@@ -1,6 +1,6 @@
 //manipulando elementos entre componentes com useContext
 
-import React, {createContext, useContext} from "react";
+import React, {createContext, useContext, useState} from "react";
 
 // criar contexto
 const Contexto =  createContext();
@@ -9,8 +9,15 @@ function Principal(){
 
     let texto = 'Enviando informações';
 
+    //useState
+    const [fundo, setFundo] = useState('yellow');
+
+    const alterarFundo = () => {
+        setFundo(fundo === 'yellow' ? 'blue' : 'yellow');
+    }
+
     return( 
-        <Contexto.Provider value={{texto}}>       
+        <Contexto.Provider value={{texto, fundo , alterarFundo}}>       
         <Camada1/>
         </Contexto.Provider>
     );
@@ -39,11 +46,12 @@ function Camada2(){
 //Camada 3
 function Camada3(){
 
-    const {texto} = useContext(Contexto);
+    const {texto, fundo, alterarFundo} = useContext(Contexto);
 
     return(
-        <div style={{backgroundColor:'yellow', width:'300px', heigh: '300px', margin: '50px'}}>
+        <div style={{backgroundColor:fundo, width:'300px', heigh: '300px', margin: '50px'}}>
             <p>{texto}</p>
+            <button onClick={alterarFundo}>Clique aqui</button>
         </div>
     );
 }
