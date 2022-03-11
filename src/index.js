@@ -12,11 +12,12 @@ import Exemplo07 from './hooks/Exemplo07_useContext';
 import Exemplo08 from './hooks/Exemplo08_useRef';
 import Exemplo09 from './hooks/Exemplo09_useReducer';
 import Exemplo10 from "./hooks/Exemplo10_useMemo";
+import Exemplo11 from "./hooks/Exemplo11_useCallback";
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Exemplo10 />
+    <Exemplo11 />
   </React.StrictMode>,
   document.getElementById('root')
 );
